@@ -9,7 +9,7 @@ function getAndPrintHTMLChunks () {
 
   https.get(requestOptions, function(response) {
 
-    respone.setEncoding('utf8');
+    response.setEncoding('utf8');
 
     response.on('data', function(chunk) {
       console.log('Chunk recieved.' + '\n');
