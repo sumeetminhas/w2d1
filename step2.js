@@ -7,9 +7,10 @@ function getAndPrintHTML () {
     path: '/http-examples/step2.html'
   };
 
-  var stream = "";
 
   https.get(requestOptions, function(response) {
+
+    var stream = "";
 
     response.setEncoding('utf8');
 
@@ -19,6 +20,7 @@ function getAndPrintHTML () {
     });
 
     response.on('end', function() {
+      console.log(stream);
       console.log('Response stream complete.');
     });
   });
